@@ -77,10 +77,22 @@ void maior_menor_idade(Pessoa **pessoa, int qtdPessoas)
 int main(void)
 {
 	setlocale(LC_ALL, "Portuguese");
-	int n, c;
+	int n, c, i;
 	printf("Quantas pessoas deseja cadastra?\n");
 	scanf("%d", &n);
 	Pessoa **pessoa = (Pessoa **)malloc(n * sizeof(Pessoa *));
+	if(pessoa == NULL){
+		printf("Erro de memoria!");
+		exit(1);
+	}
+
+	/* for(i=0; i<n; i++){
+		pessoa[i] = (Pessoa *) malloc(sizeof(Pessoa));
+		if(pessoa[i] == NULL){
+			printf("Erro de memoria!");
+			exit(1);
+		}
+	} */
 
 	preencher_dados(pessoa, n);
 
@@ -93,7 +105,7 @@ int main(void)
 		altera_idade(pessoa, n);
 	}
 	maior_menor_idade(pessoa, n);
-	for (int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		free(pessoa[i]);
 	}
