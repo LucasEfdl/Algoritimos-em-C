@@ -38,7 +38,7 @@ void imprime_pessoa(Pessoa **pessoa, int qtdPessoas)
 void altera_idade(Pessoa **pessoa, int qtdPessoas)
 {
 	float numberDocument;
-	int i, novoSalario;
+	int i;
 	printf("Informe o Número do documento da pessoa que deseja alterar a idade: ");
 	scanf("%f", &numberDocument);
 	for (i = 0; i < qtdPessoas; i++)
@@ -71,7 +71,7 @@ void maior_menor_idade(Pessoa **pessoa, int qtdPessoas)
 			strcpy(pessoaNova, pessoa[i]->nome);
 		}
 	}
-	printf("\nPessoa mais velha:\n%s\nPessoa mais nova:%s\n", pessoaVelha, pessoaNova);
+	printf("\nPessoa mais velha: %s\nPessoa mais nova: %s\n", pessoaVelha, pessoaNova);
 }
 
 int main(void)
@@ -86,13 +86,13 @@ int main(void)
 		exit(1);
 	}
 
-	/* for(i=0; i<n; i++){
+	for(i=0; i<n; i++){
 		pessoa[i] = (Pessoa *) malloc(sizeof(Pessoa));
 		if(pessoa[i] == NULL){
 			printf("Erro de memoria!");
 			exit(1);
 		}
-	} */
+	}
 
 	preencher_dados(pessoa, n);
 

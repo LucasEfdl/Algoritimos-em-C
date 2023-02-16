@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Incompleta
 int main(void){
     int m, n;
     printf("Digite o numero de linhas e colunas da matriz:");
