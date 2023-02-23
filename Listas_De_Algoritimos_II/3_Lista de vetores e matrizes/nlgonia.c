@@ -109,7 +109,7 @@ int main(void)
         }
 
         // For que verifica a ultima linha
-        for (int i = (m - 1); i < m; i++)
+        for (int i = (m-1); i < m; i++)
         {
             for (int j = 0; j < n; j++)
             {
@@ -124,7 +124,7 @@ int main(void)
                     }
                     else if ((j != 0) && (j != n - 1))
                     {
-                        if (matriz[i][j - 1] == '.' || matriz[i][j + 1] == '.' || matriz[i + 1][j] == '.')
+                        if (matriz[i][j - 1] == '.' || matriz[i][j + 1] == '.' || matriz[i - 1][j] == '.')
                         {
                             qtdCostas++;
                         }

@@ -14,6 +14,10 @@ int main(void) {
     printf("Quantos funcionários deseja cadastra?\n");
     scanf("%d", &n);
     Funcionario *funcionario = (Funcionario *) malloc(n * sizeof(Funcionario));
+    if(funcionario == NULL){
+        printf("Erro na alocação de memoria!");
+        exit(1);
+    }
 
     /* Preenchendo o vetor funcionario 18-26 */
     for(int i = 0; i < n; i++){
