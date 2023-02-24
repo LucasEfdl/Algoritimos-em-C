@@ -10,10 +10,10 @@ typedef struct pessoa
 	int idade;
 } Pessoa;
 
-void preencher_dados(Pessoa ** pessoa, int qtdPessoas)
+void preencher_dados(Pessoa **pessoa, int qtdPessoas)
 {
 	int i;
-	for ( i = 0; i < qtdPessoas; i++)
+	for (i = 0; i < qtdPessoas; i++)
 	{
 		printf("Digite o nome da %dº pessoa:\n", i + 1);
 		scanf(" %[^\n]s", pessoa[i]->nome);
@@ -81,14 +81,17 @@ int main(void)
 	printf("Quantas pessoas deseja cadastra?\n");
 	scanf("%d", &n);
 	Pessoa **pessoa = (Pessoa **)malloc(n * sizeof(Pessoa *));
-	if(pessoa == NULL){
+	if (pessoa == NULL)
+	{
 		printf("Erro de memoria!");
 		exit(1);
 	}
 
-	for(i=0; i<n; i++){
-		pessoa[i] = (Pessoa *) malloc(sizeof(Pessoa));
-		if(pessoa[i] == NULL){
+	for (i = 0; i < n; i++)
+	{
+		pessoa[i] = (Pessoa *)malloc(sizeof(Pessoa));
+		if (pessoa[i] == NULL)
+		{
 			printf("Erro de memoria!");
 			exit(1);
 		}
