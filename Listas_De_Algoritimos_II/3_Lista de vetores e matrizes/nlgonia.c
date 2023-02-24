@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Incompleta
 int main(void)
 {
     int m, n, qtdCostas = 0;
@@ -109,7 +108,7 @@ int main(void)
         }
 
         // For que verifica a ultima linha
-        for (int i = (m-1); i < m; i++)
+        for (int i = (m - 1); i < m; i++)
         {
             for (int j = 0; j < n; j++)
             {

@@ -5,7 +5,7 @@
 
 int main(void) {
   setlocale(LC_ALL, "Portuguese");
-  int qtdQuest, i, j, qtdAlunos, aprovados;
+  int qtdQuest, i, j, qtdAlunos, aprovados = 0;
   float pontosPorQuest, nota, porcAprovados;
 
 
